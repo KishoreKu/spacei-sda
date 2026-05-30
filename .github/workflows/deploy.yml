@@ -29,12 +29,12 @@ jobs:
           npm run build
 
       - name: Deploy via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
-          server: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USERNAME }}
+          server: 'spacei.westley-group.com'
           password: ${{ secrets.SFTP_PASSWORD }}
-          protocol: sftp
-          port: 21098 # Standard Namecheap SFTP port, change if different
-          local-dir: ./app/dist/
-          server-dir: ${{ secrets.SFTP_REMOTE_PATH }}
+          port: 21098
+          local_path: './app/dist/*'
+          remote_path: '/public_html/spacei'
+          sftp_only: true
