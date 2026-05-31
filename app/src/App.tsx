@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import LenisScrollContext from './context/LenisScrollContext'
 import Navigation from './components/Navigation'
 import StarfieldShader from './components/StarfieldShader'
+import ScrollToTop from './components/ScrollToTop'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 
@@ -37,6 +38,7 @@ function App() {
   return (
     <LenisScrollContext.Provider value={lenisRef}>
       <div className="relative min-h-screen bg-deep-space">
+        <ScrollToTop />
         <StarfieldShader />
         <Navigation />
         <main>

@@ -22,6 +22,9 @@ export default function Navigation() {
         const id = href.replace('/#', '')
         const el = document.getElementById(id)
         if (el) el.scrollIntoView({ behavior: 'smooth' })
+      } else {
+        // If on another page, navigate to home with the hash
+        window.location.href = href
       }
     }
   }
