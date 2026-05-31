@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { LenisScrollContext } from '../context/LenisScrollContext'
+import LenisScrollContext from '../context/LenisScrollContext'
 import { useContext } from 'react'
 
 export default function ScrollToTop() {
