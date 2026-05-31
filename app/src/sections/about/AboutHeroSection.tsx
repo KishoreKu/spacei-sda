@@ -26,24 +26,27 @@ function AboutStat({ value, label, suffix }: { value: number; label: string; suf
 }
 
 export default function AboutHeroSection() {
+  const sectionRef = useRef<HTMLElement>(null)
   const overlineRef = useRef<HTMLDivElement>(null)
   const headlineRef = useRef<HTMLHeadingElement>(null)
   const subtitleRef = useRef<HTMLParagraphElement>(null)
   const statsRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const tl = gsap.timeline({ delay: 0.3 })
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ delay: 0.3 })
 
-    tl.from(overlineRef.current, { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' })
-      .from(headlineRef.current, { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out' }, '-=0.3')
-      .from(subtitleRef.current, { opacity: 0, y: 20, duration: 0.7, ease: 'power3.out' }, '-=0.4')
-      .from(statsRef.current, { opacity: 0, y: 20, duration: 0.7, ease: 'power3.out' }, '-=0.3')
+      tl.from(overlineRef.current, { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' })
+        .from(headlineRef.current, { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out' }, '-=0.3')
+        .from(subtitleRef.current, { opacity: 0, y: 20, duration: 0.7, ease: 'power3.out' }, '-=0.4')
+        .from(statsRef.current, { opacity: 0, y: 20, duration: 0.7, ease: 'power3.out' }, '-=0.3')
+    }, sectionRef)
 
-    return () => { tl.kill() }
+    return () => ctx.revert()
   }, [])
 
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
+    <section ref={sectionRef} className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
       {/* Ambient Image */}
       <div
         className="absolute inset-0 hidden md:block"
