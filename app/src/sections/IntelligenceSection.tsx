@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -257,7 +257,7 @@ export default function IntelligenceSection() {
   const blocksRef = useRef<HTMLDivElement>(null)
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isMobile || !sectionRef.current || !blocksRef.current) return
 
     const blocks = blocksRef.current.children

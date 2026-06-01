@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useState, useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import OverlineLabel from '@/components/OverlineLabel'
@@ -75,7 +75,7 @@ export default function DataFlowSection() {
   const [activePanel, setActivePanel] = useState(0)
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isMobile || !sectionRef.current) return
 
     const section = sectionRef.current
