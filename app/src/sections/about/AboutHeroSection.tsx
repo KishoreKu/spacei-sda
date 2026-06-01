@@ -34,12 +34,12 @@ export default function AboutHeroSection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.3 })
+      const tl = gsap.timeline({ delay: 0.3, immediateRender: false })
 
-      tl.from(overlineRef.current, { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' })
-        .from(headlineRef.current, { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out' }, '-=0.3')
-        .from(subtitleRef.current, { opacity: 0, y: 20, duration: 0.7, ease: 'power3.out' }, '-=0.4')
-        .from(statsRef.current, { opacity: 0, y: 20, duration: 0.7, ease: 'power3.out' }, '-=0.3')
+      tl.from(overlineRef.current, { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out', immediateRender: false })
+        .from(headlineRef.current, { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out', immediateRender: false }, '-=0.3')
+        .from(subtitleRef.current, { opacity: 0, y: 20, duration: 0.7, ease: 'power3.out', immediateRender: false }, '-=0.4')
+        .from(statsRef.current, { opacity: 0, y: 20, duration: 0.7, ease: 'power3.out', immediateRender: false }, '-=0.3')
     }, sectionRef)
 
     return () => ctx.revert()

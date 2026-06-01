@@ -36,10 +36,12 @@ export default function ScrollReveal({
           duration: 0.8,
           ease: 'power3.out',
           delay,
+          immediateRender: false,
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
             toggleActions: 'play none none none',
+            once: true,
           },
         })
       } else if (variant === 'cascade' && children.length > 0) {
@@ -50,10 +52,12 @@ export default function ScrollReveal({
           duration: 0.7,
           ease: 'power3.out',
           delay,
+          immediateRender: false,
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
             toggleActions: 'play none none none',
+            once: true,
           },
         })
       } else if (variant === 'fade-scale') {
@@ -63,10 +67,12 @@ export default function ScrollReveal({
           duration: 1.0,
           ease: 'power3.out',
           delay,
+          immediateRender: false,
           scrollTrigger: {
             trigger: el,
             start: 'top 75%',
             toggleActions: 'play none none none',
+            once: true,
           },
         })
       } else if (variant === 'slide-right') {
@@ -76,10 +82,12 @@ export default function ScrollReveal({
           duration: 1.0,
           ease: 'power3.out',
           delay,
+          immediateRender: false,
           scrollTrigger: {
             trigger: el,
             start: 'top 75%',
             toggleActions: 'play none none none',
+            once: true,
           },
         })
       } else {
@@ -89,10 +97,12 @@ export default function ScrollReveal({
           duration: 0.8,
           ease: 'power3.out',
           delay,
+          immediateRender: false,
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
             toggleActions: 'play none none none',
+            once: true,
           },
         })
       }

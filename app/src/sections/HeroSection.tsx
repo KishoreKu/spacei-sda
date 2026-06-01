@@ -36,36 +36,41 @@ export default function HeroSection() {
   const statsRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const tl = gsap.timeline({ delay: 0.4 })
+    const tl = gsap.timeline({ delay: 0.4, immediateRender: false })
 
     tl.from(overlineRef.current, {
       opacity: 0,
       y: 20,
       duration: 0.6,
       ease: 'power3.out',
+      immediateRender: false,
     })
     .from(headlineRef.current, {
       opacity: 0,
       y: 30,
       duration: 0.8,
       ease: 'power3.out',
+      immediateRender: false,
     }, '-=0.3')
     .from(subtitleRef.current, {
       opacity: 0,
       y: 20,
       duration: 0.7,
       ease: 'power3.out',
+      immediateRender: false,
     }, '-=0.4')
     .from(ctaRef.current, {
       opacity: 0,
       y: 15,
       duration: 0.6,
       ease: 'power3.out',
+      immediateRender: false,
     }, '-=0.3')
     .from(statsRef.current, {
       opacity: 0,
       duration: 0.8,
       ease: 'power2.out',
+      immediateRender: false,
     }, '-=0.2')
 
     return () => { tl.kill() }

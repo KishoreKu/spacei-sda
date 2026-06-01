@@ -9,7 +9,11 @@ export default function ScrollToTop() {
   const lenisRef = useContext(LenisScrollContext)
 
   useEffect(() => {
-    // Reset scroll position
+    // Kill all stale ScrollTrigger instances from the previous page
+    // This MUST happen before the new page's GSAP effects register
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+
+    // Reset scroll position immediately
     if (!hash) {
       if (lenisRef?.current) {
         lenisRef.current.scrollTo(0, { immediate: true })
@@ -18,10 +22,11 @@ export default function ScrollToTop() {
       }
     }
 
-    // Give the DOM a moment to settle then refresh ScrollTrigger
+    // Give the new page's GSAP effects time to register, then refresh
+    // so ScrollTrigger calculates correct trigger positions
     const timer = setTimeout(() => {
       ScrollTrigger.refresh()
-    }, 100)
+    }, 200)
 
     return () => clearTimeout(timer)
   }, [pathname, hash, lenisRef])

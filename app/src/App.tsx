@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 import Lenis from 'lenis'
 import { gsap } from 'gsap'
@@ -14,7 +14,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 function App() {
   const lenisRef = useRef<Lenis | null>(null)
-  const location = useLocation()
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -44,7 +43,7 @@ function App() {
         <StarfieldShader />
         <Navigation />
         <main className="relative z-10">
-          <Routes key={location.pathname} location={location}>
+          <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
           </Routes>

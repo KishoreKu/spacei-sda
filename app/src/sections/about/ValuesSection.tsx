@@ -76,10 +76,12 @@ export default function ValuesSection() {
           stagger: 0.12,
           duration: 0.7,
           ease: 'power3.out',
+          immediateRender: false,
           scrollTrigger: {
             trigger: cardsRef.current,
             start: 'top 75%',
             toggleActions: 'play none none none',
+            once: true,
           },
         })
       } else {
@@ -89,10 +91,12 @@ export default function ValuesSection() {
           stagger: 0.15,
           duration: 0.8,
           ease: 'power3.out',
+          immediateRender: false,
           scrollTrigger: {
             trigger: cardsRef.current,
             start: 'top 75%',
             toggleActions: 'play none none none',
+            once: true,
           },
         })
       }
