@@ -81,36 +81,38 @@ export default function DataFlowSection() {
     const section = sectionRef.current
     const panelEls = section.querySelectorAll('.data-panel')
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: 'top top',
-        end: '+=3000',
-        pin: true,
-        scrub: 1,
-        onUpdate: (self) => {
-          const progress = self.progress
-          const idx = Math.min(Math.floor(progress * 4), 3)
-          setActivePanel(idx)
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: '+=3000',
+          pin: true,
+          scrub: 1,
+          onUpdate: (self) => {
+            const progress = self.progress
+            const idx = Math.min(Math.floor(progress * 4), 3)
+            setActivePanel(idx)
+          },
         },
-      },
-    })
+      })
 
-    panelEls.forEach((panel, i) => {
-      tl.fromTo(panel,
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.25, ease: 'power2.out' },
-        i * 0.25
-      )
-      if (i < panelEls.length - 1) {
-        tl.to(panel,
-          { y: -80, opacity: 0, duration: 0.15, ease: 'power2.in' },
-          (i + 1) * 0.25 - 0.05
+      panelEls.forEach((panel, i) => {
+        tl.fromTo(panel,
+          { y: 100, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.25, ease: 'power2.out' },
+          i * 0.25
         )
-      }
-    })
+        if (i < panelEls.length - 1) {
+          tl.to(panel,
+            { y: -80, opacity: 0, duration: 0.15, ease: 'power2.in' },
+            (i + 1) * 0.25 - 0.05
+          )
+        }
+      })
+    }, sectionRef)
 
-    return () => { tl.kill() }
+    return () => ctx.revert()
   }, [isMobile])
 
   return (

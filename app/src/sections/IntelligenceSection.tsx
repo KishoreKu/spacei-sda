@@ -261,22 +261,23 @@ export default function IntelligenceSection() {
     if (isMobile || !sectionRef.current || !blocksRef.current) return
 
     const blocks = blocksRef.current.children
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top top',
+          end: '+=2000',
+          pin: true,
+          scrub: 1,
+        },
+      })
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: 'top top',
-        end: '+=2000',
-        pin: true,
-        scrub: 1,
-      },
-    })
+      tl.fromTo(blocks[0], { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.33, ease: 'power3.out' })
+      tl.fromTo(blocks[1], { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.33, ease: 'power3.out' }, 0.33)
+      tl.fromTo(blocks[2], { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.34, ease: 'power3.out' }, 0.66)
+    }, sectionRef)
 
-    tl.fromTo(blocks[0], { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.33, ease: 'power3.out' })
-    tl.fromTo(blocks[1], { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.33, ease: 'power3.out' }, 0.33)
-    tl.fromTo(blocks[2], { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.34, ease: 'power3.out' }, 0.66)
-
-    return () => { tl.kill() }
+    return () => ctx.revert()
   }, [isMobile])
 
   return (
