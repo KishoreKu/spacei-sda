@@ -2,7 +2,8 @@ const LOGOS = ['Orbital Dynamics', 'Apogee Space', 'Meridian SDA', 'Vanguard Orb
 
 export default function SpaceEyeLogoWall() {
   return (
-    <section style={{ maxWidth: 1160, margin: '0 auto', padding: '12px 40px 40px' }}>
+    <section style={{ background: '#F4EFE3' }}>
+    <div style={{ maxWidth: 1160, margin: '0 auto', padding: '12px 40px 40px' }}>
       <div style={{ textAlign: 'center', fontFamily: "'IBM Plex Mono',monospace", fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#A79E8B', marginBottom: 26 }}>
         Trusted across the space enterprise
       </div>
@@ -16,6 +17,7 @@ export default function SpaceEyeLogoWall() {
       <div style={{ textAlign: 'center', fontSize: 12.5, color: '#B4AC98', marginTop: 14, fontFamily: "'IBM Plex Mono',monospace" }}>
         Representative segments — swap in your customer logos.
       </div>
+    </div>
     </section>
   )
 }

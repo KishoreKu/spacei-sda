@@ -1,10 +1,10 @@
+import SpaceEyeLogo from './SpaceEyeLogo'
+
 export default function SpaceEyeNav() {
   return (
     <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', maxWidth: 1240, margin: '0 auto', padding: '22px 40px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>
-        <div style={{ position: 'relative', width: 26, height: 26, borderRadius: '50%', border: '1.5px solid #1A1917', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--accent,#CC785C)' }} />
-        </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 11, color: '#1A1917' }}>
+        <SpaceEyeLogo size={26} />
         <span style={{ fontSize: 19, fontWeight: 600, letterSpacing: '-0.01em' }}>Space&thinsp;Eye</span>
         <span style={{ fontFamily: "'IBM Plex Mono',monospace", fontSize: 10.5, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--accent,#CC785C)', border: '1px solid #E6C6B6', borderRadius: 5, padding: '2px 7px' }}>
           beta

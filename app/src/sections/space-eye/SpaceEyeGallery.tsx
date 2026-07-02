@@ -6,17 +6,14 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 gsap.registerPlugin(Observer, ScrollTrigger)
 
 const IMAGES = [
-  { src: 'https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=900&q=80', alt: 'Night sky over mountains' },
-  { src: 'https://cdn.pixabay.com/photo/2011/12/14/12/21/orion-nebula-11107_640.jpg', alt: 'Orion nebula' },
+  { src: 'https://images-assets.nasa.gov/image/KSC-20170418-PH_AWG04_0023/KSC-20170418-PH_AWG04_0023~medium.jpg', alt: 'NASA rocket launch against bright sky' },
   { src: 'https://images.unsplash.com/photo-1517976487492-5750f3195933?auto=format&fit=crop&w=900&q=80', alt: 'Deep space field' },
   { src: 'https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&w=900&q=80', alt: 'Star trails' },
-  { src: 'https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=900&q=80', alt: 'Earth from orbit' },
   { src: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=80', alt: 'Earth observed from orbit' },
   { src: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80', alt: 'City lights seen from orbit at night' },
   { src: 'https://images.pexels.com/photos/586063/pexels-photo-586063.jpeg?auto=compress&cs=tinysrgb&w=900', alt: 'Satellite in orbit over Earth' },
   { src: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=900&q=80', alt: 'Reentry debris trail' },
-  { src: 'https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?auto=format&fit=crop&w=900&q=80', alt: 'Rocket launch' },
-  { src: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=900&q=80', alt: 'Galaxy field' },
+  { src: 'https://images-assets.nasa.gov/image/iss056e130478/iss056e130478~medium.jpg', alt: 'CubeSat satellite deployment from the ISS' },
 ]
 
 // ─── Tuning Constants (matched to Claude Science) ─────────────────────────

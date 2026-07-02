@@ -7,7 +7,8 @@ const pillarText = (title: string, body: string) => (
 
 export default function SpaceEyePlatform() {
   return (
-    <section id="platform" style={{ maxWidth: 1240, margin: '0 auto', padding: '96px 40px 0' }}>
+    <section id="platform" style={{ background: '#F4EFE3' }}>
+    <div style={{ maxWidth: 1240, margin: '0 auto', padding: '96px 40px 0' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid #E4DDCE', paddingTop: 16, fontFamily: "'IBM Plex Mono',monospace", fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#9A927F' }}>
         <span>Space Eye</span><span>[ 002 ]</span>
       </div>
@@ -70,6 +71,7 @@ export default function SpaceEyePlatform() {
           <img src="https://images.pexels.com/photos/586063/pexels-photo-586063.jpeg?auto=compress&cs=tinysrgb&w=1100" alt="Satellite in orbit over Earth" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} loading="lazy" />
         </div>
       </div>
+    </div>
     </section>
   )
 }

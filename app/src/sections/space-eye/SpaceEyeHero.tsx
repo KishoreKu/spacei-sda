@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-const HERO_VIDEO_SRC = 'https://videos.pexels.com/video-files/2062566/2062566-hd_1920_1080_24fps.mp4'
+const HERO_VIDEO_SRC = 'https://videos.pexels.com/video-files/8733055/8733055-hd_1280_720_30fps.mp4'
 const HERO_POSTER_SRC = 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1000&q=55'
 
 interface SpaceEyeHeroProps {
@@ -55,34 +55,22 @@ export default function SpaceEyeHero({ onOpenFilm }: SpaceEyeHeroProps) {
         </div>
       </header>
 
-      <div style={{ maxWidth: 1180, margin: '0 auto', padding: '8px 40px 0' }}>
-        <div style={{ position: 'relative', borderRadius: 22, padding: '34px 34px 0', overflow: 'hidden', background: 'radial-gradient(120% 130% at 50% 0%, #E6EBDD 0%, #EEEDE2 45%, #FBFAF6 100%)' }}>
-          <div style={{ position: 'relative', margin: '0 auto', maxWidth: 1000, borderRadius: '14px 14px 0 0', overflow: 'hidden', border: '1px solid rgba(20,19,17,.1)', borderBottom: 'none', boxShadow: '0 -1px 0 rgba(255,255,255,.6) inset, 0 40px 80px -30px rgba(20,19,17,.35)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '12px 16px', background: '#141311' }}>
-              <span style={{ width: 11, height: 11, borderRadius: '50%', background: '#E5675B' }} />
-              <span style={{ width: 11, height: 11, borderRadius: '50%', background: '#E7B14B' }} />
-              <span style={{ width: 11, height: 11, borderRadius: '50%', background: '#5FA860' }} />
-              <span style={{ marginLeft: 14, fontFamily: "'IBM Plex Mono',monospace", fontSize: 11, color: '#8A8578', letterSpacing: '.04em' }}>
-                spaceeye — live catalog
-              </span>
-            </div>
-            <div ref={videoWrapRef} onClick={onOpenFilm} style={{ position: 'relative', aspectRatio: '16/9', cursor: 'pointer', background: '#000' }}>
-              <video
-                {...(videoVisible ? { src: HERO_VIDEO_SRC } : {})}
-                poster={HERO_POSTER_SRC}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="none"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-              />
-              <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(180deg,rgba(20,19,17,.05),rgba(20,19,17,.28))' }}>
-                <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 66, height: 66, borderRadius: '50%', background: 'rgba(255,255,255,.94)', color: '#141311', fontSize: 19, paddingLeft: 4, boxShadow: '0 10px 30px rgba(0,0,0,.28)' }}>
-                  &#9654;
-                </span>
-              </div>
-            </div>
+      <div style={{ maxWidth: 1320, margin: '0 auto', padding: '8px 24px 0' }}>
+        <div ref={videoWrapRef} onClick={onOpenFilm} style={{ position: 'relative', aspectRatio: '16/9', cursor: 'pointer', background: '#000', borderRadius: 28, overflow: 'hidden', boxShadow: '0 40px 80px -30px rgba(20,19,17,.35)' }}>
+          <video
+            {...(videoVisible ? { src: HERO_VIDEO_SRC } : {})}
+            poster={HERO_POSTER_SRC}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+          <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(180deg,rgba(20,19,17,.05),rgba(20,19,17,.28))' }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 66, height: 66, borderRadius: '50%', background: 'rgba(255,255,255,.94)', color: '#141311', fontSize: 19, paddingLeft: 4, boxShadow: '0 10px 30px rgba(0,0,0,.28)' }}>
+              &#9654;
+            </span>
           </div>
         </div>
       </div>

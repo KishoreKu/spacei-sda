@@ -1,3 +1,5 @@
+const LIGHTBOX_VIDEO_SRC = 'https://videos.pexels.com/video-files/8733055/8733055-hd_1920_1080_30fps.mp4'
+
 interface SpaceEyeVideoLightboxProps {
   open: boolean
   onClose: () => void
@@ -16,7 +18,7 @@ export default function SpaceEyeVideoLightbox({ open, onClose }: SpaceEyeVideoLi
         style={{ position: 'relative', width: '100%', maxWidth: 1100, aspectRatio: '16/9', borderRadius: 14, overflow: 'hidden', boxShadow: '0 40px 100px rgba(0,0,0,.55)' }}
       >
         <video
-          src="https://videos.pexels.com/video-files/2062566/2062566-hd_1920_1080_24fps.mp4"
+          src={LIGHTBOX_VIDEO_SRC}
           autoPlay
           loop
           controls

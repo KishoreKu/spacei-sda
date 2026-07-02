@@ -32,7 +32,8 @@ export default function SpaceEyeUseCases() {
   const active = TABS[tab]
 
   return (
-    <section id="usecases" style={{ maxWidth: 1240, margin: '0 auto', padding: '96px 40px 0' }}>
+    <section id="usecases" style={{ background: '#EEF1E6' }}>
+    <div style={{ maxWidth: 1240, margin: '0 auto', padding: '96px 40px 0' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid #E4DDCE', paddingTop: 16, fontFamily: "'IBM Plex Mono',monospace", fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#9A927F' }}>
         <span>Space Eye</span><span>[ 003 ]</span>
       </div>
@@ -72,6 +73,7 @@ export default function SpaceEyeUseCases() {
           <img src={active.img} alt="Space Eye use case" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} loading="lazy" />
         </div>
       </div>
+    </div>
     </section>
   )
 }

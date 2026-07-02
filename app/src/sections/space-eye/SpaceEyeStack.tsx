@@ -1,6 +1,7 @@
 export default function SpaceEyeStack() {
   return (
-    <section id="stack" style={{ maxWidth: 1240, margin: '0 auto', padding: '80px 40px 0' }}>
+    <section id="stack" style={{ background: '#EEF1E6' }}>
+    <div style={{ maxWidth: 1240, margin: '0 auto', padding: '80px 40px 0' }}>
       <div style={{ maxWidth: 640 }}>
         <div style={{ fontFamily: "'IBM Plex Mono',monospace", fontSize: 12.5, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--accent,#CC785C)', marginBottom: 18 }}>
           Works with your stack
@@ -15,6 +16,7 @@ export default function SpaceEyeStack() {
           Explore connectors <span style={{ color: 'var(--accent,#CC785C)' }}>&rarr;</span>
         </a>
       </div>
+    </div>
     </section>
   )
 }
