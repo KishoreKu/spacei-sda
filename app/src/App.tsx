@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 import Lenis from 'lenis'
 import { gsap } from 'gsap'
@@ -14,6 +14,8 @@ gsap.registerPlugin(ScrollTrigger)
 
 function App() {
   const lenisRef = useRef<Lenis | null>(null)
+  const { pathname } = useLocation()
+  const isHome = pathname === '/'
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -38,10 +40,10 @@ function App() {
 
   return (
     <LenisScrollContext.Provider value={lenisRef}>
-      <div className="relative min-h-screen bg-deep-space">
+      <div className={isHome ? 'relative min-h-screen' : 'relative min-h-screen bg-deep-space'}>
         <ScrollToTop />
-        <StarfieldShader />
-        <Navigation />
+        {!isHome && <StarfieldShader />}
+        {!isHome && <Navigation />}
         <main className="relative z-10">
           <Routes>
             <Route path="/" element={<HomePage />} />
