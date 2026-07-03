@@ -8,6 +8,7 @@ import SpaceEyeUseCases from './SpaceEyeUseCases'
 import SpaceEyeTestimonials from './SpaceEyeTestimonials'
 import SpaceEyeLogoWall from './SpaceEyeLogoWall'
 import SpaceEyeStack from './SpaceEyeStack'
+import SpaceEyePricing from './SpaceEyePricing'
 import SpaceEyeFAQ from './SpaceEyeFAQ'
 import SpaceEyeCTA from './SpaceEyeCTA'
 import SpaceEyeFooter from './SpaceEyeFooter'
@@ -48,6 +49,7 @@ export default function SpaceEyePage() {
       <SpaceEyeTestimonials />
       <SpaceEyeLogoWall />
       <SpaceEyeStack />
+      <SpaceEyePricing />
       <SpaceEyeFAQ />
       <SpaceEyeCTA />
       <SpaceEyeFooter />

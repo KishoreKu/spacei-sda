@@ -14,6 +14,7 @@ export default function SpaceEyeNav() {
       <div className="hidden md:flex" style={{ alignItems: 'center', gap: 32, fontSize: 14.5, color: '#4A463D', fontWeight: 500 }}>
         <a href="#platform" style={{ color: 'inherit', textDecoration: 'none' }}>Platform</a>
         <a href="#usecases" style={{ color: 'inherit', textDecoration: 'none' }}>Use cases</a>
+        <a href="#pricing" style={{ color: 'inherit', textDecoration: 'none' }}>Pricing</a>
         <a href="#stack" style={{ color: 'inherit', textDecoration: 'none' }}>Connectors</a>
         <a href="#faq" style={{ color: 'inherit', textDecoration: 'none' }}>FAQ</a>
       </div>
