@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import { SPACEI_APP_URL } from '@/config/urls'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -227,24 +228,32 @@ export default function SpaceEyePricing() {
                 </div>
               </div>
 
-              <button
+              <a
+                href={
+                  typeof plan.price === 'number'
+                    ? `${SPACEI_APP_URL}/?plan=${plan.name.toLowerCase()}&billing=${billingCycle}`
+                    : 'mailto:sales@spacei.us'
+                }
+                {...(typeof plan.price === 'number' ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 style={{
                   fontFamily: "'Hanken Grotesk',sans-serif",
                   fontSize: 15,
                   fontWeight: 600,
+                  display: 'block',
+                  boxSizing: 'border-box',
                   width: '100%',
                   padding: '14px 20px',
-                  marginBottom: 32,
                   borderRadius: 9,
-                  border: 'none',
-                  cursor: 'pointer',
+                  textDecoration: 'none',
                   background: plan.highlighted ? '#141311' : 'var(--accent,#CC785C)',
                   color: plan.highlighted ? 'var(--accent,#CC785C)' : '#FBF9F3',
-                  transition: 'all 0.3s ease',
                 }}
               >
                 {plan.cta}
-              </button>
+              </a>
+              <div style={{ fontSize: 12, minHeight: 16, margin: '8px 0 24px', color: plan.highlighted ? 'rgba(255,255,255,.7)' : '#8A8578' }}>
+                {plan.price === 0 ? 'Card on file required — $0 today' : typeof plan.price === 'number' ? 'Billed for the selected plan at checkout' : ' '}
+              </div>
 
               <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0, margin: 0 }}>
                 {plan.features.map((feature, idx) => (

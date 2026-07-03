@@ -40,7 +40,7 @@ export default function SpaceEyeHero({ onOpenFilm }: SpaceEyeHeroProps) {
           Space Eye fuses every sensor feed into one live catalog, predicts collision risk in real time, and traces every alert back to the observation behind it — so your operators act on intelligence, not spreadsheets.
         </p>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="#cta" style={{ fontSize: 15, fontWeight: 600, color: '#FBF9F3', background: 'var(--accent,#CC785C)', padding: '14px 26px', borderRadius: 9, textDecoration: 'none' }}>
+          <a href="#pricing" style={{ fontSize: 15, fontWeight: 600, color: '#FBF9F3', background: 'var(--accent,#CC785C)', padding: '14px 26px', borderRadius: 9, textDecoration: 'none' }}>
             Get started
           </a>
           <button

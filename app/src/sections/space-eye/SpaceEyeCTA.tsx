@@ -6,11 +6,11 @@ export default function SpaceEyeCTA() {
           Keep your orbit navigable.
         </h2>
         <p style={{ fontSize: 18, lineHeight: 1.6, color: '#5C5648', maxWidth: 520, margin: '0 auto 34px' }}>
-          Request access and we'll stand up an environment against your catalog within a week — then screen your live constellation so you can see the alerts on real data.
+          Start free with your first satellite, or trial a paid plan — we'll screen your live constellation so you can see the alerts on real data.
         </p>
         <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="mailto:hello@spacei.us" style={{ fontSize: 15, fontWeight: 600, color: '#FBF9F3', background: 'var(--accent,#CC785C)', padding: '15px 28px', borderRadius: 9, textDecoration: 'none' }}>
-            Request access
+          <a href="#pricing" style={{ fontSize: 15, fontWeight: 600, color: '#FBF9F3', background: 'var(--accent,#CC785C)', padding: '15px 28px', borderRadius: 9, textDecoration: 'none' }}>
+            View plans
           </a>
           <a href="mailto:sales@spacei.us" style={{ fontSize: 15, fontWeight: 600, color: '#141311', background: '#FFF', border: '1px solid #DAD3C5', padding: '15px 28px', borderRadius: 9, textDecoration: 'none' }}>
             Contact sales

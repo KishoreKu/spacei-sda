@@ -6,7 +6,7 @@ const FAQS = [
   { q: 'Where does Space Eye run, and is my data private?', a: 'Deploy in your own cloud or on-premise. Raw observation data and compute stay in your environment; you control access with SSO, SCIM, and role-based controls.' },
   { q: 'Does it replace my existing tools?', a: 'No. Space Eye is the workbench where your existing catalogs, flight-dynamics tools, and ground-segment systems work together. Connect them through connectors and keep what already works.' },
   { q: 'What orbital regimes are supported?', a: 'LEO through GEO, including the crowded low-orbit shells and the geostationary belt. Models are tuned per regime rather than applied uniformly.' },
-  { q: 'How do we get started?', a: 'Request access and we will stand up an environment against your catalog within a week, then screen your live constellation so you can see the alerts on real data.' },
+  { q: 'How do we get started?', a: 'Pick a plan and create your account — start free with a single satellite or trial a paid tier, and we will screen your live constellation so you can see the alerts on real data. For mega-constellations, contact sales for a custom Enterprise setup.' },
 ]
 
 export default function SpaceEyeFAQ() {
