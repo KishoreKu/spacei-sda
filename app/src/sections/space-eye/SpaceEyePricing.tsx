@@ -16,6 +16,14 @@ interface Plan {
 
 const PLANS: Plan[] = [
   {
+    name: 'Free',
+    price: 0,
+    period: '',
+    description: 'Get started with Space Eye',
+    features: ['1 satellite', '5 queries/month', '7-day lookhead', 'Basic alerts', 'Community support'],
+    cta: 'Start Free',
+  },
+  {
     name: 'Starter',
     price: 299,
     period: '/month',
@@ -58,6 +66,11 @@ const PLANS: Plan[] = [
   },
 ]
 
+function getDisplayPrice(monthlyPrice: number, cycle: 'monthly' | 'annual') {
+  // Annual = 2 months free (~17% off), shown as the per-month equivalent
+  return cycle === 'annual' && monthlyPrice > 0 ? Math.round((monthlyPrice * 10) / 12) : monthlyPrice
+}
+
 export default function SpaceEyePricing() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly')
   const containerRef = useRef<HTMLDivElement>(null)
@@ -67,18 +80,23 @@ export default function SpaceEyePricing() {
       const cards = containerRef.current?.querySelectorAll('[data-card]')
       if (!cards) return
 
-      gsap.from(cards, {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top center+=100',
-          once: true,
-        },
-      })
+      gsap.fromTo(
+        cards,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: 'power3.out',
+          clearProps: 'opacity,transform',
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top center+=100',
+            once: true,
+          },
+        }
+      )
     }, containerRef)
 
     return () => ctx.revert()
@@ -141,11 +159,10 @@ export default function SpaceEyePricing() {
         {/* Pricing Cards */}
         <div
           ref={containerRef}
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4"
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
             gap: 32,
-            maxWidth: 1100,
+            maxWidth: 1320,
             margin: '0 auto',
           }}
         >
@@ -161,7 +178,7 @@ export default function SpaceEyePricing() {
                 position: 'relative',
                 transform: plan.highlighted ? 'scale(1.05)' : 'scale(1)',
                 boxShadow: plan.highlighted ? '0 30px 60px rgba(204,120,92,.2)' : '0 10px 30px rgba(0,0,0,.08)',
-                transition: 'all 0.3s ease',
+                transition: 'box-shadow 0.3s ease',
               }}
             >
               {plan.highlighted && (
@@ -197,11 +214,16 @@ export default function SpaceEyePricing() {
               <div style={{ marginBottom: 32, paddingBottom: 32, borderBottom: plan.highlighted ? '1px solid rgba(255,255,255,.2)' : '1px solid #E1DBCD' }}>
                 <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: 4 }}>
                   <span style={{ fontFamily: "'Newsreader',serif", fontSize: 48, fontWeight: 400, color: plan.highlighted ? '#FBF9F3' : '#141311' }}>
-                    {typeof plan.price === 'number' ? '$' : ''}{plan.price}
+                    {typeof plan.price === 'number' ? `$${getDisplayPrice(plan.price, billingCycle)}` : plan.price}
                   </span>
                   <span style={{ fontSize: 14, color: plan.highlighted ? 'rgba(255,255,255,.7)' : '#5C5648' }}>
                     {plan.period}
                   </span>
+                </div>
+                <div style={{ fontSize: 12.5, marginTop: 8, minHeight: 16, color: plan.highlighted ? 'rgba(255,255,255,.7)' : '#8A8578' }}>
+                  {billingCycle === 'annual' && typeof plan.price === 'number' && plan.price > 0
+                    ? `$${getDisplayPrice(plan.price, 'annual') * 12} billed annually`
+                    : ' '}
                 </div>
               </div>
 

@@ -6,25 +6,25 @@ export default function SpaceEyeLogo({ size = 26 }: SpaceEyeLogoProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 40 40" style={{ display: 'block', flex: 'none' }}>
       <path
-        d="M4,20 Q20,6 36,20 Q20,34 4,20 Z"
+        d="M3,20 Q20,4 37,20 Q20,36 3,20 Z"
         fill="none"
         stroke="currentColor"
-        strokeWidth={1.7}
+        strokeWidth={2.6}
         strokeLinejoin="round"
       />
+      <circle cx={20} cy={20} r={7} fill="var(--accent, #CC785C)" />
       <ellipse
         cx={20}
         cy={20}
-        rx={14}
-        ry={5.5}
-        transform="rotate(-16 20 20)"
+        rx={12.5}
+        ry={4.2}
+        transform="rotate(-18 20 20)"
         fill="none"
         stroke="currentColor"
-        strokeWidth={1}
-        opacity={0.45}
+        strokeWidth={1.6}
+        opacity={0.6}
       />
-      <circle cx={33.4} cy={17.6} r={2.5} fill="var(--accent, #CC785C)" />
-      <circle cx={32.6} cy={16.8} r={0.6} fill="#fff" opacity={0.85} />
+      <circle cx={17.4} cy={17.2} r={1.9} fill="#fff" opacity={0.9} />
     </svg>
   )
 }

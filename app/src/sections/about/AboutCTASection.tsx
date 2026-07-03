@@ -31,12 +31,12 @@ export default function AboutCTASection() {
           <div>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
               <PillButton size="large" href="#cta">Request a Demo</PillButton>
-              <GhostButton href="mailto:hello@spacei.io">Contact Us</GhostButton>
+              <GhostButton href="mailto:hello@spacei.us">Contact Us</GhostButton>
             </div>
           </div>
           <div>
             <p className="mt-6 text-base text-text-muted">
-              Or email us directly at <a href="mailto:hello@spacei.io" className="text-accent-violet hover:underline">hello@spacei.io</a>
+              Or email us directly at <a href="mailto:hello@spacei.us" className="text-accent-violet hover:underline">hello@spacei.us</a>
             </p>
           </div>
         </ScrollReveal>

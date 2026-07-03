@@ -41,7 +41,7 @@ export default function SpaceEyeHero({ onOpenFilm }: SpaceEyeHeroProps) {
         </p>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
           <a href="#cta" style={{ fontSize: 15, fontWeight: 600, color: '#FBF9F3', background: 'var(--accent,#CC785C)', padding: '14px 26px', borderRadius: 9, textDecoration: 'none' }}>
-            Request access
+            Get started
           </a>
           <button
             onClick={onOpenFilm}

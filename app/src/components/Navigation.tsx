@@ -76,7 +76,7 @@ export default function Navigation() {
 
           {/* CTA - Desktop */}
           <div className="hidden md:block">
-            <PillButton href="mailto:hello@spacei.io">Request Demo</PillButton>
+            <PillButton href="mailto:hello@spacei.us">Request Demo</PillButton>
           </div>
 
           {/* Hamburger - Mobile */}
@@ -123,7 +123,7 @@ export default function Navigation() {
             </Link>
           )
         ))}
-        <PillButton href="mailto:hello@spacei.io" onClick={() => setMobileMenuOpen(false)}>
+        <PillButton href="mailto:hello@spacei.us" onClick={() => setMobileMenuOpen(false)}>
           Request Demo
         </PillButton>
       </div>

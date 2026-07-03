@@ -9,10 +9,10 @@ export default function SpaceEyeCTA() {
           Request access and we'll stand up an environment against your catalog within a week — then screen your live constellation so you can see the alerts on real data.
         </p>
         <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="mailto:hello@spacei.io" style={{ fontSize: 15, fontWeight: 600, color: '#FBF9F3', background: 'var(--accent,#CC785C)', padding: '15px 28px', borderRadius: 9, textDecoration: 'none' }}>
+          <a href="mailto:hello@spacei.us" style={{ fontSize: 15, fontWeight: 600, color: '#FBF9F3', background: 'var(--accent,#CC785C)', padding: '15px 28px', borderRadius: 9, textDecoration: 'none' }}>
             Request access
           </a>
-          <a href="mailto:hello@spacei.io" style={{ fontSize: 15, fontWeight: 600, color: '#141311', background: '#FFF', border: '1px solid #DAD3C5', padding: '15px 28px', borderRadius: 9, textDecoration: 'none' }}>
+          <a href="mailto:sales@spacei.us" style={{ fontSize: 15, fontWeight: 600, color: '#141311', background: '#FFF', border: '1px solid #DAD3C5', padding: '15px 28px', borderRadius: 9, textDecoration: 'none' }}>
             Contact sales
           </a>
         </div>
