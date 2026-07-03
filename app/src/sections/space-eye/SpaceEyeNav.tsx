@@ -1,4 +1,5 @@
 import SpaceEyeLogo from './SpaceEyeLogo'
+import { SPACEI_APP_URL } from '@/config/urls'
 
 export default function SpaceEyeNav() {
   return (
@@ -17,7 +18,7 @@ export default function SpaceEyeNav() {
         <a href="#faq" style={{ color: 'inherit', textDecoration: 'none' }}>FAQ</a>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
-        <a href="#" className="hidden sm:inline" style={{ fontSize: 14.5, color: '#4A463D', textDecoration: 'none', fontWeight: 500 }}>Sign in</a>
+        <a href={SPACEI_APP_URL} target="_blank" rel="noopener noreferrer" className="hidden sm:inline" style={{ fontSize: 14.5, color: '#4A463D', textDecoration: 'none', fontWeight: 500 }}>Sign in</a>
         <a href="#cta" style={{ fontSize: 14.5, fontWeight: 600, color: '#FBF9F3', background: '#1A1917', padding: '10px 18px', borderRadius: 8, textDecoration: 'none' }}>Request access</a>
       </div>
     </nav>

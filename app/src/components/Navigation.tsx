@@ -12,6 +12,7 @@ export default function Navigation() {
     { label: 'Products', href: '/#features' },
     { label: 'Intelligence', href: '/#intelligence' },
     { label: 'Platform', href: '/#platform' },
+    { label: 'Pricing', href: '/pricing' },
     { label: 'About', href: '/about' },
   ]
 
@@ -75,7 +76,7 @@ export default function Navigation() {
 
           {/* CTA - Desktop */}
           <div className="hidden md:block">
-            <PillButton href="#cta">Request Demo</PillButton>
+            <PillButton href="mailto:hello@spacei.io">Request Demo</PillButton>
           </div>
 
           {/* Hamburger - Mobile */}
@@ -122,7 +123,7 @@ export default function Navigation() {
             </Link>
           )
         ))}
-        <PillButton href="#cta" onClick={() => setMobileMenuOpen(false)}>
+        <PillButton href="mailto:hello@spacei.io" onClick={() => setMobileMenuOpen(false)}>
           Request Demo
         </PillButton>
       </div>

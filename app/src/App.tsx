@@ -9,6 +9,7 @@ import StarfieldShader from './components/StarfieldShader'
 import ScrollToTop from './components/ScrollToTop'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
+import PricingPage from './pages/PricingPage'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -48,6 +49,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/pricing" element={<PricingPage />} />
           </Routes>
         </main>
       </div>
