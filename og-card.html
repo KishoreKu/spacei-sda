@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #FBF9F3;
+    color: #141311;
+    font-family: 'Hanken Grotesk', sans-serif;
+    position: relative;
+  }
+  /* subtle warm vignette */
+  .wash {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(900px 500px at 88% 18%, rgba(204,120,92,0.10), transparent 65%),
+      radial-gradient(700px 420px at 8% 100%, rgba(20,19,17,0.05), transparent 60%);
+  }
+  /* big decorative orbit-eye on the right */
+  .mark {
+    position: absolute;
+    right: -150px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 640px; height: 640px;
+  }
+  .content {
+    position: absolute; inset: 0;
+    padding: 72px 80px;
+    display: flex; flex-direction: column;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 16px;
+  }
+  .brand svg { display: block; }
+  .wordmark {
+    font-weight: 700; font-size: 30px; letter-spacing: -0.01em; color: #141311;
+  }
+  .middle { flex: 1; display: flex; flex-direction: column; justify-content: center; max-width: 720px; }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 19px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #CC785C; margin-bottom: 30px;
+  }
+  h1 {
+    font-family: 'Newsreader', serif;
+    font-weight: 400; font-size: 74px; line-height: 1.05;
+    letter-spacing: -0.02em; color: #141311;
+  }
+  .sub {
+    margin-top: 28px;
+    font-size: 24px; line-height: 1.5; color: #5C5648; max-width: 600px;
+  }
+  .footer {
+    display: flex; align-items: center; gap: 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 17px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: #8A8374;
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #CC785C; }
+</style>
+</head>
+<body>
+  <div class="wash"></div>
+
+  <svg class="mark" viewBox="0 0 40 40" fill="none">
+    <path d="M3,20 Q20,4 37,20 Q20,36 3,20 Z" stroke="#141311" stroke-width="0.55" stroke-linejoin="round" opacity="0.16" />
+    <circle cx="20" cy="20" r="7" fill="#CC785C" opacity="0.92" />
+    <ellipse cx="20" cy="20" rx="12.5" ry="4.2" transform="rotate(-18 20 20)" stroke="#141311" stroke-width="0.35" opacity="0.28" />
+    <ellipse cx="20" cy="20" rx="16.5" ry="5.6" transform="rotate(-18 20 20)" stroke="#141311" stroke-width="0.2" opacity="0.14" />
+    <circle cx="17.4" cy="17.2" r="1.9" fill="#fff" opacity="0.9" />
+    <circle cx="31.2" cy="16.4" r="0.55" fill="#CC785C" />
+    <circle cx="8.6" cy="24.1" r="0.45" fill="#141311" opacity="0.5" />
+  </svg>
+
+  <div class="content">
+    <div class="brand">
+      <svg width="44" height="44" viewBox="0 0 40 40">
+        <path d="M3,20 Q20,4 37,20 Q20,36 3,20 Z" fill="none" stroke="#141311" stroke-width="2.6" stroke-linejoin="round" />
+        <circle cx="20" cy="20" r="7" fill="#CC785C" />
+        <ellipse cx="20" cy="20" rx="12.5" ry="4.2" transform="rotate(-18 20 20)" fill="none" stroke="#141311" stroke-width="1.6" opacity="0.6" />
+        <circle cx="17.4" cy="17.2" r="1.9" fill="#fff" opacity="0.9" />
+      </svg>
+      <div class="wordmark">Space&thinsp;Eye</div>
+    </div>
+
+    <div class="middle">
+      <div class="eyebrow">Space Domain Awareness · spacei.us</div>
+      <h1>Your command center for everything in orbit</h1>
+      <div class="sub">One live catalog. Real-time collision risk. Every alert traceable to the observation behind it.</div>
+    </div>
+
+    <div class="footer">
+      <span class="dot"></span>
+      <span>Live orbital intelligence</span>
+    </div>
+  </div>
+</body>
+</html>
