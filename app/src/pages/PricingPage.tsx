@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import SpaceEyePricing from '@/sections/space-eye/SpaceEyePricing'
+import { SPACEI_APP_URL } from '@/config/urls'
 
 const ACCENT = '#CC785C'
 
@@ -164,7 +165,9 @@ export default function PricingPage() {
             Join leading space agencies and private operators in tracking their assets with Space Eye.
           </p>
           <a
-            href="#"
+            href={SPACEI_APP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: 'inline-flex',
               alignItems: 'center',

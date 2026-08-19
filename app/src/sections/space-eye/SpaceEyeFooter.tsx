@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import SpaceEyeLogo from './SpaceEyeLogo'
 
 const linkStyle = { color: 'inherit', textDecoration: 'none' } as const
@@ -25,9 +26,9 @@ export default function SpaceEyeFooter() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 11, fontSize: 14, color: '#D9D4C6' }}>
             <div style={{ fontFamily: "'IBM Plex Mono',monospace", fontSize: 11.5, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#8A8578', marginBottom: 2 }}>Company</div>
-            <a href="#" style={linkStyle}>About</a>
-            <a href="#" style={linkStyle}>Careers</a>
-            <a href="#" style={linkStyle}>Contact</a>
+            <Link to="/about" style={linkStyle}>About</Link>
+            <a href="#" onClick={(e) => e.preventDefault()} style={linkStyle}>Careers</a>
+            <a href="#" onClick={(e) => e.preventDefault()} style={linkStyle}>Contact</a>
           </div>
         </div>
       </div>

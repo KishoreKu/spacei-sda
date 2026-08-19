@@ -12,7 +12,7 @@ export default function SpaceEyeStack() {
         <p style={{ fontSize: 17, lineHeight: 1.6, color: '#5C5648', margin: '0 0 8px' }}>
           Wire in your catalogs, flight-dynamics tools, ELNs, and internal APIs so Space Eye works with the systems your operations center already runs.
         </p>
-        <a href="#" style={{ fontSize: 15, fontWeight: 600, color: '#141311', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+        <a href="#" onClick={(e) => e.preventDefault()} style={{ fontSize: 15, fontWeight: 600, color: '#141311', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
           Explore connectors <span style={{ color: 'var(--accent,#CC785C)' }}>&rarr;</span>
         </a>
       </div>

@@ -8,7 +8,7 @@ export default function SpaceEyePromoBand() {
         <h2 style={{ fontFamily: "'Newsreader',serif", fontWeight: 300, fontSize: 38, lineHeight: 1.2, margin: '0 auto 26px', maxWidth: 660, color: '#141311' }}>
           One catalog for your whole team — sensors, orbits, risk, and reentry, in a single AI-native environment.
         </h2>
-        <a href="#" style={{ fontSize: 15, fontWeight: 600, color: '#FBF9F3', background: '#1A1917', padding: '13px 24px', borderRadius: 9, textDecoration: 'none' }}>
+        <a href="#" onClick={(e) => e.preventDefault()} style={{ fontSize: 15, fontWeight: 600, color: '#FBF9F3', background: '#1A1917', padding: '13px 24px', borderRadius: 9, textDecoration: 'none' }}>
           Read the announcement
         </a>
       </div>
