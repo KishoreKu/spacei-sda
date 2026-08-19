@@ -1,3 +1,5 @@
+import { scrollToSection } from '@/lib/scrollToSection'
+
 export default function SpaceEyeCTA() {
   return (
     <section id="cta" style={{ maxWidth: 1240, margin: '0 auto', padding: '80px 40px 96px' }}>
@@ -9,7 +11,7 @@ export default function SpaceEyeCTA() {
           Start free with your first satellite, or trial a paid plan — we'll screen your live constellation so you can see the alerts on real data.
         </p>
         <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="#pricing" style={{ fontSize: 15, fontWeight: 600, color: '#FBF9F3', background: 'var(--accent,#CC785C)', padding: '15px 28px', borderRadius: 9, textDecoration: 'none' }}>
+          <a href="#pricing" onClick={(e) => scrollToSection(e, 'pricing')} style={{ fontSize: 15, fontWeight: 600, color: '#FBF9F3', background: 'var(--accent,#CC785C)', padding: '15px 28px', borderRadius: 9, textDecoration: 'none' }}>
             View plans
           </a>
           <a href="mailto:sales@spacei.us" style={{ fontSize: 15, fontWeight: 600, color: '#141311', background: '#FFF', border: '1px solid #DAD3C5', padding: '15px 28px', borderRadius: 9, textDecoration: 'none' }}>

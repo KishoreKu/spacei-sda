@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { scrollToSection } from '@/lib/scrollToSection'
 
 const TABS = [
   {
@@ -65,7 +66,7 @@ export default function SpaceEyeUseCases() {
             {active.title}
           </h3>
           <p style={{ fontSize: 17, lineHeight: 1.62, color: '#5C5648', margin: '0 0 26px' }}>{active.body}</p>
-          <a href="#cta" style={{ fontSize: 15, fontWeight: 600, color: '#141311', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+          <a href="#cta" onClick={(e) => scrollToSection(e, 'cta')} style={{ fontSize: 15, fontWeight: 600, color: '#141311', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
             See it on live data <span style={{ color: 'var(--accent,#CC785C)' }}>&rarr;</span>
           </a>
         </div>

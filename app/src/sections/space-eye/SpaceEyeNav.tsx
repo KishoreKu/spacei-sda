@@ -1,5 +1,6 @@
 import SpaceEyeLogo from './SpaceEyeLogo'
 import { SPACEI_APP_URL } from '@/config/urls'
+import { scrollToSection } from '@/lib/scrollToSection'
 
 export default function SpaceEyeNav() {
   return (
@@ -12,15 +13,15 @@ export default function SpaceEyeNav() {
         </span>
       </div>
       <div className="hidden md:flex" style={{ alignItems: 'center', gap: 32, fontSize: 14.5, color: '#4A463D', fontWeight: 500 }}>
-        <a href="#platform" style={{ color: 'inherit', textDecoration: 'none' }}>Platform</a>
-        <a href="#usecases" style={{ color: 'inherit', textDecoration: 'none' }}>Use cases</a>
-        <a href="#pricing" style={{ color: 'inherit', textDecoration: 'none' }}>Pricing</a>
-        <a href="#stack" style={{ color: 'inherit', textDecoration: 'none' }}>Connectors</a>
-        <a href="#faq" style={{ color: 'inherit', textDecoration: 'none' }}>FAQ</a>
+        <a href="#platform" onClick={(e) => scrollToSection(e, 'platform')} style={{ color: 'inherit', textDecoration: 'none' }}>Platform</a>
+        <a href="#usecases" onClick={(e) => scrollToSection(e, 'usecases')} style={{ color: 'inherit', textDecoration: 'none' }}>Use cases</a>
+        <a href="#pricing" onClick={(e) => scrollToSection(e, 'pricing')} style={{ color: 'inherit', textDecoration: 'none' }}>Pricing</a>
+        <a href="#stack" onClick={(e) => scrollToSection(e, 'stack')} style={{ color: 'inherit', textDecoration: 'none' }}>Connectors</a>
+        <a href="#faq" onClick={(e) => scrollToSection(e, 'faq')} style={{ color: 'inherit', textDecoration: 'none' }}>FAQ</a>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
         <a href={SPACEI_APP_URL} target="_blank" rel="noopener noreferrer" className="hidden sm:inline" style={{ fontSize: 14.5, color: '#4A463D', textDecoration: 'none', fontWeight: 500 }}>Sign in</a>
-        <a href="#pricing" style={{ fontSize: 14.5, fontWeight: 600, color: '#FBF9F3', background: '#1A1917', padding: '10px 18px', borderRadius: 8, textDecoration: 'none' }}>Get started</a>
+        <a href="#pricing" onClick={(e) => scrollToSection(e, 'pricing')} style={{ fontSize: 14.5, fontWeight: 600, color: '#FBF9F3', background: '#1A1917', padding: '10px 18px', borderRadius: 8, textDecoration: 'none' }}>Get started</a>
       </div>
     </nav>
   )

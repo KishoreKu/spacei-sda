@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { scrollToSection } from '@/lib/scrollToSection'
 
 const HERO_VIDEO_SRC = 'https://videos.pexels.com/video-files/8733055/8733055-hd_1280_720_30fps.mp4'
 const HERO_POSTER_SRC = 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1000&q=55'
@@ -40,7 +41,7 @@ export default function SpaceEyeHero({ onOpenFilm }: SpaceEyeHeroProps) {
           Space Eye fuses every sensor feed into one live catalog, predicts collision risk in real time, and traces every alert back to the observation behind it — so your operators act on intelligence, not spreadsheets.
         </p>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="#pricing" style={{ fontSize: 15, fontWeight: 600, color: '#FBF9F3', background: 'var(--accent,#CC785C)', padding: '14px 26px', borderRadius: 9, textDecoration: 'none' }}>
+          <a href="#pricing" onClick={(e) => scrollToSection(e, 'pricing')} style={{ fontSize: 15, fontWeight: 600, color: '#FBF9F3', background: 'var(--accent,#CC785C)', padding: '14px 26px', borderRadius: 9, textDecoration: 'none' }}>
             Get started
           </a>
           <button

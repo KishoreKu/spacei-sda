@@ -30,7 +30,7 @@ export default function AboutCTASection() {
           </div>
           <div>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
-              <PillButton size="large" href="#cta">Request a Demo</PillButton>
+              <PillButton size="large" href="mailto:hello@spacei.us">Request a Demo</PillButton>
               <GhostButton href="mailto:hello@spacei.us">Contact Us</GhostButton>
             </div>
           </div>

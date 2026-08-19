@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import SpaceEyeLogo from './SpaceEyeLogo'
+import { scrollToSection } from '@/lib/scrollToSection'
 
 const linkStyle = { color: 'inherit', textDecoration: 'none' } as const
 
@@ -19,10 +20,10 @@ export default function SpaceEyeFooter() {
         <div style={{ display: 'flex', gap: 64, flexWrap: 'wrap' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 11, fontSize: 14, color: '#D9D4C6' }}>
             <div style={{ fontFamily: "'IBM Plex Mono',monospace", fontSize: 11.5, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#8A8578', marginBottom: 2 }}>Product</div>
-            <a href="#platform" style={linkStyle}>Platform</a>
-            <a href="#usecases" style={linkStyle}>Use cases</a>
-            <a href="#stack" style={linkStyle}>Connectors</a>
-            <a href="#pricing" style={linkStyle}>Pricing</a>
+            <a href="#platform" onClick={(e) => scrollToSection(e, 'platform')} style={linkStyle}>Platform</a>
+            <a href="#usecases" onClick={(e) => scrollToSection(e, 'usecases')} style={linkStyle}>Use cases</a>
+            <a href="#stack" onClick={(e) => scrollToSection(e, 'stack')} style={linkStyle}>Connectors</a>
+            <a href="#pricing" onClick={(e) => scrollToSection(e, 'pricing')} style={linkStyle}>Pricing</a>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 11, fontSize: 14, color: '#D9D4C6' }}>
             <div style={{ fontFamily: "'IBM Plex Mono',monospace", fontSize: 11.5, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#8A8578', marginBottom: 2 }}>Company</div>
